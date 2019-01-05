@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./style.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1>CSS選擇器</h1>
+
+    <ol type="A">
+        <li>基本選擇器</li>
+        <ol>
+            <a href="#A-1">
+                <li>通用選擇器</li>
+            </a>
+            <a href="#A-2">
+                <li>類型選擇器</li>
+            </a>
+            <a href="#A-3">
+                <li>Class選擇器</li>
+            </a>
+            <a href="#A-4">
+                <li>ID選擇器</li>
+            </a>
+            <a href="#A-5">
+                <li>屬性選擇器</li>
+            </a>
+        </ol>
+
+
+        <li>群組選擇器</li>
+        <ol>
+            <a href="#B-1">
+                <li>群組</li>
+            </a>
+        </ol>
+
+
+        <li>組合選擇器</li>
+        <ol>
+            <a href="#C-1">
+                <li>後代選擇器</li>
+            </a>
+            <a href="#C-2">
+                <li>子選擇器</li>
+            </a>
+            <a href="#C-3">
+                <li>相鄰兄弟選擇器</li>
+            </a>
+            <a href="#C-4">
+                <li>一般兄弟選擇器</li>
+            </a>
+        </ol>
+
+        <li>偽類別選擇器</li>
+        <ol>
+            <a href="#D-1">
+                <li>連結類</li>
+            </a>
+            <a href="#D-2">
+                <li>使用者操作類</li>
+            </a>
+            <a href="#D-3">
+                <li>結構類(同層結構)</li>
+            </a>
+            <a href="#D-4">
+                <li>結構類(同層並排除異元素)</li>
+            </a>
+            <a href="#D-5">
+                <li>UI狀態</li>
+            </a>
+            <a href="#D-6">
+                <li>否定偽類</li>
+            </a>
+        </ol>
+
+
+        <li>偽元素選擇器</li>
+        <ol>
+            <a href="#E-1">
+                <li>偽元素</li>
+            </a>
+        </ol>
+
+
+    </ol>
+
+
+
+        <h1>A、基本選擇器</h1>
+
+        <div class="selector" id="A-1">
+            <h3>1.通用選擇器</h3>
+            <code>
+                * { background: aqua; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+            </div>
+        </div>
+
+
+        <div class="selector" id="A-2">
+            <h3>2.類型選擇器</h3>
+            <code>
+                span { background: aqua; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <span>我是span</span>
+            </div>
+        </div>
+
+        <div class="selector" id="A-3">
+            <h3>3.Class選擇器</h3>
+            <code>
+                .container { background: aqua; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <p class="container">我是.container</p>
+            </div>
+        </div>
+
+        <div class="selector" id="A-4">
+            <h3>4.ID選擇器</h3>
+            <code>
+                #submit-btn { background: aqua; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <button id="submit-btn">我是#submit</button>
+            </div>
+        </div>
+
+        <div class="selector" id="A-5">
+            <h3>5.屬性選擇器</h3>
+            <code>
+                input[type="text"] { background: aqua; } <br>
+                補充：<br>
+                = : 完全相等<br>
+                ~= : 多個值時，其中一個值符合<br>
+                ^= : 字串開頭符合<br>
+                $= : 字串結尾符合<br>
+                *= : 字串包含
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <input type="text" placeholder="text">
+                <input type="number" placeholder="number">
+            </div>
+        </div>
+
+        <hr>
+
+        <h1>B、群組選擇器</h1>
+
+        <div class="selector" id="B-1">
+            <h3>1.群組選擇器</h3>
+            <code>
+                th, td { border: 1px black solid }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <table>
+                    <tr>
+                        <th>我是th</th>
+                        <td>我是td</td>
+                        <td>我是td</td>
+                        <td>我是td</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1>C、組合選擇器</h1>
+
+        <div class="selector" id="C-1">
+            <h3>1.後代選擇器</h3>
+            <code>
+                ol li { background: aqua };
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <ol>
+                    <li>有序清單1</li>
+                    <li>有序清單2</li>
+                    <ul>
+                        <li>無序清單1</li>
+                        <li>無序清單2</li>
+                        <li>無序清單3</li>
+                    </ul>
+                    <li>有序清單3</li>
+                </ol>
+                <li>我在外面</li>
+
+            </div>
+        </div>
+
+        <div class="selector" id="C-2">
+            <h3>2.子選擇器</h3>
+            <code>
+                ol > li { background: aqua };
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <ol>
+                    <li>有序清單1</li>
+                    <li>有序清單2</li>
+                    <ul>
+                        <li>無序清單1</li>
+                        <li>無序清單2</li>
+                        <li>無序清單3</li>
+                    </ul>
+                    <li>有序清單3</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="selector" id="C-3">
+            <h3>3.相鄰兄弟選擇器</h3>
+            <code>
+                h4 + h5 { background: aqua };
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <h4>我是h4</h4>
+                <h5>我是h5</h5>
+                <h5>我是h5</h5>
+                <h6>我是h6</h6>
+                <h6>我是h6</h6>
+            </div>
+        </div>
+
+        <div class="selector" id="C-4">
+            <h3>4.一般兄弟選擇器</h3>
+            <code>
+                h4 ~ h5 { background: aqua };
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <h4>我是h4</h4>
+                <h5>我是h5</h5>
+                <h5>我是h5</h5>
+                <h6>我是h6</h6>
+                <h6>我是h6</h6>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1>D、偽類別選擇器</h1>
+
+        <div class="selector" id="D-1">
+            <h3>1.連結類</h3>
+            <code>
+                a:link { background: aqua }<br>
+                a:visited { background: pink }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <a href="https://dfjkdjf.com">我是連結</a>
+                <a href="">我是連結</a>
+            </div>
+        </div>
+
+        <div class="selector" id="D-2">
+            <h3>2.使用者操作類</h3>
+            <code>
+                input:hover { background: aqua }<br>
+                input:active { border-width: 5px; }<br>
+                input:focus { background: yellow }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <input type="text" placeholder="我是text">
+            </div>
+        </div>
+
+        <div class="selector" id="D-3">
+            <h3>3.結構類(同層結構)</h3>
+            <code>
+                td:nth-child(3) { background: aqua; }<br>
+                td:nth-last-child(3) { background: pink; }<br>
+                td:first-child { background: red; }<br>
+                td:last-child { background: blue; }<br>
+                補充：<br>
+                關鍵字：odd, even<br>
+                公式：2n, 2n+1
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <table>
+                    <tr>
+                        <td>td1</td>
+                        <th>th1</th>
+                        <td>td2</td>
+                        <td>td3</td>
+                        <td>td4</td>
+                        <td>td5</td>
+                        <th>th2</th>
+                        <td>td6</td>
+                        <td>td7</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="selector" id="D-4">
+            <h3>4.結構類(同層並排除異元素)</h3>
+            <code>
+                td:nth-of-type(3) { background: aqua; }<br>
+                td:nth-last-of-type(3) { background: pink; }<br>
+                td:first-of-type { background: red; }<br>
+                td:last-of-type { background: blue; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <table>
+                    <tr>
+                        <td>td1</td>
+                        <th>th1</th>
+                        <td>td2</td>
+                        <td>td3</td>
+                        <td>td4</td>
+                        <td>td5</td>
+                        <th>th2</th>
+                        <td>td6</td>
+                        <td>td7</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="selector" id="D-5">
+            <h3>5.UI狀態</h3>
+            <code>
+                input:disabled { background: pink; }<br>
+                input:checked { height: 30px; width: 30px; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <input type="text" placeholder="我可以選擇">
+                <input type="text" placeholder="我不能選擇" disabled>
+                <input type="radio" name="test">
+                <input type="radio" name="test">
+            </div>
+        </div>
+
+        <div class="selector" id="D-6">
+            <h3>6.否定偽類</h3>
+            <code>
+                h2:not(.estela) { background: aqua; }<br>
+                補充：<br>
+                可以是元素, class, id, 屬性, 偽類等等...
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <h2 class="reece">class: reece</h2>
+                <h2 class="peiya">class: peiya</h2>
+                <h2 class="estela">class: estela</h2>
+                <h2 class="john">class: john</h2>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1>E、偽元素選擇器</h1>
+
+        <div class="selector" id="E-1">
+            <h3>偽元素</h3>
+            <code>
+                h2 { background: aqua; }<br>
+                h2::before { content: "before"; }<br>
+                h2::after { content: "after"; }
+            </code>
+
+            <div>
+                <p class="example"><em>範例：</em></p>
+
+                <h2>我是標題2</h2>
+            </div>
+        </div>
+
+
+
+    <p id="for-more">
+        參考網站：
+        <a href="https://footmark.info/web-design/css/css-basic-selectors/"></a>
+
+        <br>
+
+        作業：
+        <a href="https://flukeout.github.io/"></a>
+    </p>
+
+
+    <script>
+        $(document).ready(function () {
+            $("a[href^='#']").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top
+                }, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

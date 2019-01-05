@@ -1,0 +1,22 @@
+h1, h3 {
+    margin: 0 0 16px 0;
+}
+
+.selector {
+    border: 1px black solid;
+    margin-bottom: 32px;
+    padding: 10px;
+}
+
+.example {
+    font-weight: 900;
+}
+
+#for-more>a::after {
+    content: attr(href);
+}
+
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+}

@@ -1,0 +1,119 @@
+* {
+    /* background: aqua; */
+}
+
+span {
+    /* background: aqua; */
+}
+
+.container {
+    /* background: aqua; */
+}
+
+#submit-btn {
+    /* background: aqua; */
+}
+
+input[type="text"] {
+    /* background: aqua; */
+}
+
+th,
+td {
+    /* border: 1px black solid; */
+}
+
+/* ol li {
+    background: aqua;
+} */
+
+/* ol > li {
+    background: aqua;
+} */
+
+h4+h5 {
+    /* background: aqua; */
+}
+
+h4~h5 {
+    /* background: aqua; */
+}
+
+a:link {
+    /* background: aqua; */
+}
+
+a:visited {
+    /* background: pink; */
+}
+
+input:hover {
+    /* background: aqua; */
+}
+
+input:active {
+    /* border-width: 5px; */
+}
+
+input:focus {
+    /* background: yellow */
+}
+
+/* td:nth-child(3) {
+    background: aqua;
+}
+
+td:nth-last-child(3) {
+    background: pink;
+}
+
+td:first-child {
+    background: red;
+}
+
+td:last-child {
+    background: blue;
+} */
+
+/* td:nth-of-type(3) {
+    background: aqua;
+}
+
+td:nth-last-of-type(3) {
+    background: pink;
+}
+
+td:first-of-type {
+    background: red;
+}
+
+td:last-of-type {
+    background: blue;
+} */
+
+
+/* input:disabled {
+    background: pink;
+}
+
+input:checked {
+    height: 30px;
+    width: 30px;
+} */
+
+input:not([type="text"]) {
+    /* background: aqua; */
+}
+
+h2 {
+    /* background: aqua; */
+}
+
+h2::before {
+    /* content: "before"; */
+    /* background: pink; */
+}
+
+h2::after {
+    /* content: "after"; */
+}
